@@ -1,6 +1,8 @@
 
 Function AutoUpdateWindows
 {
+     #Installs Nuget
+     Install-PackageProvider -Name NuGet -Force
      #Adds PSgallery to trusted repo list.
      Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
      #Downloads PSWindowsUpdate Package
